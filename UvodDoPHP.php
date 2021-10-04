@@ -63,7 +63,7 @@ echo "<br>";
 
 echo "<h2>Nadpis 2</h2><br>";
 echo "Hello ", "world<br>";
-echo "Hello ". $z ." world<br>";
+echo "Hello " . $z . " world<br>";
 print "Hello<br>";
 
 echo "<h1>2. hodina – pokračování v Úvodu do PHP</h1><br>";
@@ -73,7 +73,8 @@ echo "<h1>2. hodina – pokračování v Úvodu do PHP</h1><br>";
 $u = 2;
 $v = 5;
 
-function scitanglobpromen() {
+function scitanglobpromen()
+{
     global $u, $v;
     echo $u + $v;
 }
@@ -90,7 +91,7 @@ $hex = 0xAF;
 var_dump($hex);
 $f = 1.2;
 var_dump($f);
-$Pole = array(12,"ahoj", 2.1);
+$Pole = array(12, "ahoj", 2.1);
 echo $Pole[0];
 var_dump($Pole);
 
@@ -123,23 +124,25 @@ echo (max(0, 1, 2, 5)) . "<br>";
 echo abs(-5.7) . "<br>";
 echo sqrt(250) . "<br>";
 echo round(2.9) . "<br>";
-echo rand(0,10) . "<br>";
+echo rand(0, 10) . "<br>";
 
 
 //úkol funkce vytvoří dvě náhodná čísla od 1 do 25 a ty vypíše. Následně je vynásobí a vypíše výsledek!
-function nasob () {
-    $a = rand(1,25);
-    $b = rand(1,25);
+function nasob()
+{
+    $a = rand(1, 25);
+    $b = rand(1, 25);
     echo "prom 1: " . $a . " prom 2: " . $b . "<br>";
-    echo "nasob: ". $a * $b . "<br>";
+    echo "nasob: " . $a * $b . "<br>";
 
 }
+
 nasob();
 
 //konstanty
-define ("Ahoj", "Steve");
+define("Ahoj", "Steve");
 echo Ahoj . "<br>";
-define ("auta", ["Bmw", "Volvo", "Toyota"]);
+define("auta", ["Bmw", "Volvo", "Toyota"]);
 echo auta[1] . "<br>";
 
 //operatory ukázky
