@@ -133,5 +133,142 @@ function nasobkydvou() {
     }
 }
 
-nasobkydvou();
+// nasobkydvou();
+
+// cyklus - násobky tři
+function nasobkytri() {
+    $x = 3;
+    while ($x <= 100) {
+        echo $x . "<br>";
+        $x = $x + 3;
+    }
+}
+//nasobkytri();
+
+// Cyklus For
+function forcyklus() {
+    $x = 4;
+    for ($i = 0; $x <= 100; $i++) {
+        echo $x . "<br>";
+        $x+=4;
+    }
+}
+
+//forcyklus();
+
+function forsuda() {
+    for ($i = 2; $i <= 100; $i+=2) {
+        echo $i . "<br>";
+    }
+}
+//forsuda();
+
+// Cyklus foreach
+function foreachcyklus() {
+$pole = array(1, "slovo", 3, 4.5, 5);
+foreach ($pole as $value) {
+    echo $value . "<br>";
+}
+}
+//foreachcyklus();
+
+// Cyklus foreach - asoc.
+function foreachasoccyklus() {
+    $pole = array("auto1" => "BMW", "auto2" => "Volvo", "auto3" => "Toyota");
+    foreach ($pole as $x => $value) {
+        echo $x . " je ". $value . "<br>";
+    }
+}
+//foreachasoccyklus();
+
+// Cyklus foreach - asoc. (vek)
+function foreachasoccyklus2() {
+    $pole = array("Jan" => 18, "Pepa" => 20, "Daniel" => 22);
+    foreach ($pole as $x => $value) {
+        echo "student ". $x . " má ". $value . " let<br>";
+    }
+}
+//foreachasoccyklus2();
+
+function stastnychsedm() {
+    for ($i = 1; $i <= 7; $i++) {
+        $kolo = rand(1,10);
+        if ($kolo == 7) {
+            echo "V kole ". $i . ". se vylosovalo číslo 7! Hra končí!". "<br>";
+            break;
+        } else {
+            echo "V kole ". $i . ". se vylosovalo číslo: ". $kolo . "<br>";}
+    }
+}
+//stastnychsedm();
+
+function stastnychsedm2() {
+    $sedm = 0;
+    $nesedm = 0;
+    for ($i = 1; $i <= 7; $i++) {
+        $kolo = rand(1,10);
+        if ($kolo == 7) {
+            echo "V kole ". $i . ". se vylosovalo číslo 7!". "<br>";
+            $sedm++;
+            continue;
+        } else {
+            echo "V kole ". $i . ". se vylosovalo číslo: ". $kolo . "<br>";}
+        $nesedm++;
+    }
+    echo "Celkově bylo vytaženo číslo sedm: " . $sedm . "<br>";
+    echo "Celkově nebylo vytaženo číslo sedm: ". $nesedm . "<br>";
+}
+
+//stastnychsedm2();
+
+function ukoljedna() {
+  $x = rand(0,100);
+  $y = rand(0,100);
+  $min = 0;
+  $max = 0;
+  $pojistka = 0;
+  $pole = array();
+  if ($x > $y) {
+      $min = $y;
+      $max = $x;
+  } else {
+      $min = $x;
+      $max = $y;
+  }
+  if ($min == $max) {
+      $pojistka++;
+  }
+  if ($pojistka == 1) {
+      echo "čísla jsou stejná a cyklus nelze provést!";
+  } else {
+      $i = 0;
+      for($min; $min <= $max;$min++) {
+          $pole[$i] = $min;
+          $i++;
+      }
+  }
+  var_dump($pole);
+}
+//ukoljedna();
+
+function ukoldva() {
+$pole = array();
+$chyba = rand(0,100);
+for ($i = 0; $i <= 100; $i++) {
+    if ($i == $chyba) {
+        $pole[$i] = 101;
+    } else {
+    $pole[$i] = $i;
+    }
+}
+for ($i = 0; $i <= 100; $i++) {
+    if ($pole [$i] == 101) {
+        echo "Chyba byla nalezena!";
+        break;
+    } else {
+        echo $pole[$i] . "<br>";
+    }
+}
+}
+//ukoldva();
 ?>
