@@ -271,4 +271,19 @@ for ($i = 0; $i <= 100; $i++) {
 }
 }
 //ukoldva();
+
+//ukol sudý a lichý index
+function ukolsudlich() {
+  $pole = array();
+  for ($i = 0; $i <= 100; $i++) {
+      if ($i % 2 == 0) {
+          $pole[$i] = 1;
+      } else {
+          $pole[$i] = "cislo";
+      }
+  }
+  var_dump($pole);
+}
+ukolsudlich();
+
 ?>
