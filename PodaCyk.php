@@ -288,6 +288,38 @@ function ukolsudlich() {
 
 
 //Průvodčí
+function pruvodci()
+{
+    $jizdenky = array("", "Dětská", 10, "Student", 20, "Dospělý", 50, "Senior", 20);
+    $stanice = array("Jablonec nad Nisou", "Turnov", "Semily", "Železný brod");
+
+    for ($i = 0; $i <= 2; $i++) {
+        echo "<h2>Jsme ve stanici " . $stanice[$i] . "</h2>";
+        echo "<b>Začíná nástup cestujících:" . "</b><br>";
+        while ($i <= 2) {
+            $cest = rand(1, 8);
+            $pen = rand(0, 200);
+            if ($cest % 2 == 0) {
+                if ($jizdenky[$cest] > $pen) {
+                    echo "pokusil se nastoupit: " . $jizdenky[$cest - 1] . " neměl dost peněz. Končí nástup" . "<br>";
+                    break;
+                } else {
+                    echo "Nastoupil cestující kategorie: " . $jizdenky[$cest - 1] . "<br>";
+                }
+            } else {
+                if ($jizdenky[$cest + 1] > $pen) {
+                    echo "pokusil se nastoupit: " . $jizdenky[$cest] . " neměl dost peněz. Končí nástup" . "<br>";
+                    break;
+                } else {
+                    echo "Nastoupil cestující kategorie: " . $jizdenky[$cest] . "<br>";
+                }
+            }
+        }
+    }
+    echo "<h2>Vítejte v naší konečné stanici: " . $stanice[3] . "</h2>";
+}
+
+//Průvodčí 2.0
 $jizdenky = array("", "Dětská", 10, "Student", 20, "Dospělý", 50, "Senior", 20);
 $stanice = array("Jablonec nad Nisou", "Turnov", "Semily", "Železný brod");
 
@@ -296,23 +328,22 @@ for ($i=0; $i <= 2; $i++) {
     echo "<b>Začíná nástup cestujících:" . "</b><br>";
     while ($i <= 2) {
         $cest = rand(1,8);
+        while ($cest % 2 != 0) {
+            $cest = rand(1,8);
+        }
         $pen = rand(0,200);
-        if ($cest % 2 == 0) {
             if ($jizdenky[$cest] > $pen) {
                 echo "pokusil se nastoupit: " . $jizdenky[$cest-1] . " neměl dost peněz. Končí nástup" . "<br>";
                 break;
             } else  {
                 echo "Nastoupil cestující kategorie: " . $jizdenky[$cest-1] ."<br>";
             }
-        } else {
-            if ($jizdenky[$cest+1] > $pen) {
-                echo "pokusil se nastoupit: " . $jizdenky[$cest] . " neměl dost peněz. Končí nástup" . "<br>";
-                break;
-            } else  {
-                echo "Nastoupil cestující kategorie: " . $jizdenky[$cest] ."<br>";
-            }
-        }
+
     }
 }
 echo "<h2>Vítejte v naší konečné stanici: " . $stanice[3] . "</h2>";
+
+
+
 ?>
+
