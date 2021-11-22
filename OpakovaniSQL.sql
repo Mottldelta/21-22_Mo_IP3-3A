@@ -27,3 +27,22 @@ DROP COLUMN Adresa varchar(255);
 -- Změnit datový typ sloupce
 ALTER TABLE zamestnanci
 MODIFY COLUMN ID varchar(255);
+
+-- Komplexní tabulka (s omezeními)
+CREATE TABLE zamestatnanci (
+    ID int NOT NULL AUTO_INCREMENT,
+    Jmeno varchar(255) NOT NULL,
+    Prijmeni varchar(255) NOT NULL,
+    Adresa varchar(255),
+    PRIMARY KEY(ID)
+);
+
+-- Podmíněný výběr
+SELECT name
+FROM employees
+WHERE country = 'Austria';
+
+-- Podmíněný výběr BETWEEN
+SELECT phone, name
+FROM employees
+WHERE ID BETWEEN 15 AND 25;
