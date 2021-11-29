@@ -46,3 +46,14 @@ WHERE country = 'Austria';
 SELECT phone, name
 FROM employees
 WHERE ID BETWEEN 15 AND 25;
+
+-- Podmíněný výběr IN
+SELECT name, phone
+FROM employees
+WHERE country IN ('Colombia', 'Brazil')
+
+-- Podmíněný výběr LIKE
+SELECT *
+FROM employees
+WHERE name LIKE 'B%y'
+
