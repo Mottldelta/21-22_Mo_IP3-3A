@@ -25,6 +25,10 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
+$adress1 = "admin.php?id=$get&suma=";
+echo "<a href=". $adress1 .">Strhnout poplatek za kreditní kartu</a>" . "<br>";
+$adress2 = "admin.php?id=$get&suma=";
+echo "<a href=". $adress2 .">Strhnout poplatek za vedení účtu</a>" . "<br>";
 $adress = "seznam.php";
 echo "<a href=". $adress .">Zpět na seznam zákazníků</a>" . "<br>";
 ?>
