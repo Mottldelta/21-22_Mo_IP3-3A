@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<h1>Formulář pro zákazníky Eshopu</h1>
+<form action="subform.php" method="get">
+<!--    Fieldset složí pro dělení dotazníku na jednotlivé části-->
+    <fieldset>
+<!--        Legenda je označení části dotazníku, provazuje se s fieldsetem-->
+        <legend>Osobní udaje zakaznika:</legend>
+<!--        label je vždy navázaný na prvek (for->id) jedná se o nadpis daného prvku-->
+        <label for="custname">Jmeno zakaznika:</label>
+<!--        input jako textové pole-->
+        <input type="text" name="zakazjmeno" id="custname" placeholder="John Random" autofocus><br>
+
+<!--        Input výběr jednoho prvku ze seznamu-->
+        <label for="custmale">Muz</label>
+        <input type="radio" id="custmale" value="m" name="zakazapoh">
+        <label for="custfemale">Zena</label>
+        <input type="radio" id="custfemale" value="f" name="zakazapoh">
+        <label for="custj">Jine</label>
+        <input type="radio" id="custj" value="j" name="zakazapoh">
+        <br>
+
+<!--Input pro heslo, skryté znaky-->
+        <label for="custpas">Heslo zákazníka:</label>
+        <input type="password" id="custpas" name="zakazheslo"><br>
+<!--Input pro datum-->
+        <label for="custdate">Datum narození:</label>
+        <input type="date" id="custdate" name="zakazdat"><br>
+    </fieldset>
+
+<!--Input zaškrtávací pole-->
+    <label for="katkuch">Kuchyne</label>
+    <input type="checkbox" id="katkuch" value="kuch" name="zakazkat">
+    <label for="katele">Elektro</label>
+    <input type="checkbox" id="katele" value="elektro" name="zakazkat">
+    <br>
+
+<!--Input jako výběr ze seznamu-->
+    <label for="custtyp">Typ účtu:</label>
+    <select id="custtyp" name="zakaztyp" size="3" multiple>
+        <option value="silver">Stříbrný účet</option>
+        <option value="gold">Zlatý účet</option>
+        <option value="platinum" selected>Platinový účet</option>
+    </select>
+    <br>
+
+<!--    Textové pole (velké)-->
+    <textarea name="zakazzprav"></textarea>
+    <br>
+
+<!--    Tlačítko-->
+    <button>Klikni si!</button>
+    <br>
+    <!--    Tlačítko pro reset dotazníku do základního nastavení-->
+    <input type="reset">
+
+<!--    Submit button-->
+<input type="submit">
+</form>
+
+</body>
+</html>
