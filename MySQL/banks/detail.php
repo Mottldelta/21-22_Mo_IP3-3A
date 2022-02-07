@@ -39,7 +39,7 @@ echo "<a href=". $adress .">Zpět na seznam zákazníků</a>" . "<br>";
 
 ?>
 <br>
-<form method="post" action="vkladvyb.php">
+<form method="post" <?php $link = "vkladvyber.php?id=$get"; echo "action=$link"?>>
     <label for="suma">Suma:</label>
     <input type="number" name="suma" id="suma"><br>
     <label for="vyber">Výběr</label>
