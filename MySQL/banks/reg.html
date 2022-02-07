@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrační formulář</title>
+</head>
+<body>
+<h2>Registrační formulář pro banku</h2>
+<form action="reg.php" method="post">
+    <fieldset>
+        <legend>Osobní údaje zákazníka: </legend>
+        <label for="custname">Jmeno zakazníka:</label>
+        <input type="text" name="zakazjmeno" id="custname" placeholder="Napiš své jméno i přijmení" autofocus><br>
+        <label for="custemail">Email zakazníka:</label>
+        <input type="email" name="zakazemail" id="custemail" placeholder="Napiš svůj email"><br>
+        <label for="custcountry">Země zakazníka:</label>
+        <select id="custcountry" name="zakazem" size="1">
+            <option value="New Zealand">Nový Zeland</option>
+            <option value="Netherlands">Nizozemsko</option>
+            <option value="Vietnam">Vietnam</option>
+        </select>
+        </fieldset>
+    <fieldset>
+        <legend>Konto: </legend>
+        <label for="custkont">Jmeno zakazníka:</label>
+        <input type="number" name="zakazkonto" id="custkont" placeholder="Zadaj základní vklad"><br>
+    </fieldset>
+    <!--    Submit button-->
+    <input type="submit">
+</form>
+
+</body>
+</html>

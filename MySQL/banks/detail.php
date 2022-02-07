@@ -35,4 +35,18 @@ echo "<a href=". $adress3 .">Vynulovat účet</a>" . "<br>";
 $adress = "seznam.php";
 echo "<a href=". $adress .">Zpět na seznam zákazníků</a>" . "<br>";
 ?>
+<?php
+
+?>
+<br>
+<form method="post" action="vkladvyb.php">
+    <label for="suma">Suma:</label>
+    <input type="number" name="suma" id="suma"><br>
+    <label for="vyber">Výběr</label>
+    <input type="radio" id="vyber" value="1" name="uloha">
+    <label for="vklad">Vklad</label>
+    <input type="radio" id="vklad" value="2" name="uloha">
+    <input type="submit">
+</form>
+
 
