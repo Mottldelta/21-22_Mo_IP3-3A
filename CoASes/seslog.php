@@ -2,8 +2,8 @@
 session_start();
 if (!isset($_SESSION['log'])) {
 } else {
-    echo "Je přihlášen";
-    //echo "<form method='post' action='sesexit.php'><input type='submit'></form>";
+    echo "Jste přihlášen!";
+    echo "<form method='post' action='sesexit.php'><input type='submit' value='Odhlásit!'></form>";
 }
 ?>
 
@@ -13,9 +13,8 @@ if (!isset($_SESSION['log'])) {
 
 </head>
 <body>
-<h1>Přihlášení</h1>
-<form action="sescheck.php" method="post">
-
+<form action="sescheck.php" method="post" <?php if(isset($_SESSION['log'])){echo "hidden";} ?>>
+    <h1>Přihlášení</h1>
     <label for="custname">Jmeno:</label>
     <!--        input jako textové pole-->
     <input type="text" name="jmeno" id="custname" placeholder="Napište své přihlašovací údaje" autofocus><br>
@@ -24,7 +23,7 @@ if (!isset($_SESSION['log'])) {
     <input type="password" id="custpas" name="heslo"><br>
 
     <!--    Submit button-->
-    <input type="submit">
+    <input type="submit" <?php if(isset($_SESSION['log'])){echo "disabled";} ?>>
 </form>
 
 </body>
