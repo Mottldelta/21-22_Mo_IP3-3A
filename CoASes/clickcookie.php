@@ -8,16 +8,16 @@ if(!isset($_COOKIE['klik'])) {
 }
 ?>
 
-<html>
-<form>
-    <button onclick="<?php click() ?>">Click!</button>
-</form>
-</html>
+    <html>
+    <form>
+        <button onclick="<?php click() ?>">Click!</button>
+    </form>
+    </html>
 
 <?php
 //funkce se volá v případě kliknutí na button v rámci form v html. Následně zvyšuje číslo a přepisuje hodnotu cookie "klik"
 function click() {
- $numclick = $_COOKIE['klik'] + 1;
- setcookie('klik',$numclick,time()+2000,"/");
+    $numclick = $_COOKIE['klik'] + 1;
+    setcookie('klik',$numclick,time()+2000,"/");
 }
 ?>
