@@ -1,7 +1,7 @@
 <?php
 // Práce s časem a datem
-date_timezone_set('Europe/Prague');
-echo date("d:i:sa") . "<br>";
+date_default_timezone_set('Europe/Prague');
+echo date("h:i:sa") . "<br>";
 
 //Include
 include 'include.php';
